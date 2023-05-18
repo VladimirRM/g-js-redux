@@ -30,6 +30,7 @@ const Form = () => {
             <button
                 type='submit'
                 className='shrink-0 bg-lime-300  hover:bg-lime-400 transition-all px-3 text-sm'
+            onClick={()=>addTodoHandler()}
             >
                 Submit
             </button>
