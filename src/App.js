@@ -1,11 +1,15 @@
 
 import './App.css';
-import User from './components/User';
+import TodoItem from './components/TodoItem';
+// import User from './components/User';
+import Form from './components/Form';
 
 function App() {
   return (
     <div className="App">
-   <User/>
+   {/* <User/> */}
+   <TodoItem/>
+   <Form/>
     </div>
   );
 }
