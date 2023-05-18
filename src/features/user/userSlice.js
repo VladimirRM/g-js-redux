@@ -10,11 +10,14 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setFIrstName: (state,action)=>{
+        setFirstName: (state,action)=>{
             state.firstName = action.payload
-        }
+        },
+        setLastName: (state,action)=>{
+            state.firstName = action.payload
+        },
     }
 })
 
-export const {setFIrstName} = userSlice.actions
+export const {setFirstName,setLastName} = userSlice.actions
 export default userSlice.reducer
