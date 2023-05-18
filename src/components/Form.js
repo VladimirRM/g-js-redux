@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from '../features/todo/todoSlice'
-import { v4 as uuidv4 } from 'uuid';
+import { v4  } from 'uuid';
 
 const Form = () => {
 
@@ -9,7 +9,7 @@ const Form = () => {
 
     const addTodoHandler =  () => {
         const  todo = {
-            id: '',
+            id: v4(),
             text: "",
             completed: false,
         }
