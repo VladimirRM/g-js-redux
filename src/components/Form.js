@@ -6,6 +6,8 @@ import { v4  } from 'uuid';
 const Form = () => {
 
     const dispatch = useDispatch()
+    const [todoValue, setTodoValue] = React.useState('')
+
 
     const addTodoHandler =  () => {
         const  todo = {
@@ -13,13 +15,17 @@ const Form = () => {
             text: "",
             completed: false,
         }
+        dispatch(addTodo(todo))
+        setTodoValue('')
     }
     return (
         <form className='w-full flex' onSubmit={(e) => e.preventDefault()}>
             <input
+            value={todoValue}
                 type='text'
                 placeholder='Type something...'
                 className='w-full p-1 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
+                 onChange={(e) => setTodoValue(e.target.value)}
             />
             <button
                 type='submit'
