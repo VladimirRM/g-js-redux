@@ -24,7 +24,9 @@ export const postSlice = createSlice({
           }
     },
     extraReducers:{
-        
+       [getPosts.fulfilled]:()=>console.log("fulfilled") ,
+       [getPosts.pending]:()=>console.log("pending") ,
+       [getPosts.rejected]:()=>console.log("rejected") ,
     }
 })
 
