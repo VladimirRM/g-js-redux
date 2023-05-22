@@ -1,17 +1,18 @@
 
 import './App.css';
+import User from './components/User';
 
 
 
-// import { useSelector } from 'react-redux';
-import Posts from './features/post/Posts';
+
+
 
 function App() {
 
   return (
     <div className="App">
 
-<Posts/>
+   <User/>
   
 
     </div>
