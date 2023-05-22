@@ -1,6 +1,6 @@
 import React from 'react'
 import FirstName from './FirstName'
-import LastName from './LastName'
+// import LastName from './LastName'
 import { useDispatch } from 'react-redux'
 import { setFirstName } from '../features/user/userSlice'
 
@@ -33,7 +33,7 @@ const User = () => {
                 <div className='flex flex-col'>
                     <div className='flex font-light'>Last Name:</div>
                     <div className='flex'>
-                        <LastName />
+                        {/* <LastName /> */}
                     </div>
                 </div>
             </div>
