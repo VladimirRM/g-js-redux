@@ -21,6 +21,9 @@ export const postSlice = createSlice({
     reducers:{
           setPosts: (state,action)=>{
              state.posts = action.payload
+          },
+          deletePostById:(state,action)=>{
+            state.posts = state.posts.filter((post)=>post.id !==action.payload)
           }
     },
     extraReducers:{
@@ -30,6 +33,11 @@ export const postSlice = createSlice({
     }
 })
 
-export const { setPosts} = postSlice.actions
+export const deletePostById = createAsyncThunk('posts/removePostById',async (id,{rejectWithValue},dispatch)=>{
+      await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      dispatch(deletePostById(id))
+})
+
+export const { setPosts,deletePost} = postSlice.actions
 
 export default  postSlice.reducer 
