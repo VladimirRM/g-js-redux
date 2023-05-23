@@ -6,7 +6,7 @@ const initialState = {
      lastName: ""
 }
 
- export const userSLice = createSlice({
+ export const userSlice = createSlice({
     name:user,
     initialState,
     reducers: {
@@ -15,3 +15,6 @@ const initialState = {
         }
     }
  })
+
+ export const {setFirstName} =  userSlice.actions
+ export default  userSlice.reducer 
