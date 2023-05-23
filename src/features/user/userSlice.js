@@ -19,5 +19,5 @@ const initialState = {
     }
  })
 
- export const {setFirstName} =  userSlice.actions
+ export const {setFirstName,setLastName} =  userSlice.actions
  export default  userSlice.reducer 
