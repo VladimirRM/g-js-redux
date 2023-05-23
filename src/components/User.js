@@ -1,8 +1,11 @@
 import React from 'react'
 import FirstName from './FirstName'
 import LastName from './LastName'
+import { useDispatch } from 'react-redux'
 
 const User = () => {
+
+    const dispatch = useDispatch()
     return (
         <div className='flex flex-col'>
             <input
@@ -19,14 +22,14 @@ const User = () => {
                 <div className='flex flex-col'>
                     <div className='flex font-light'>First Name:</div>
                     <div className='flex'>
-                        <FirstName />
+                        {/* <FirstName /> */}
                     </div>
                 </div>
 
                 <div className='flex flex-col'>
                     <div className='flex font-light'>Last Name:</div>
                     <div className='flex'>
-                        <LastName />
+                        {/* <LastName /> */}
                     </div>
                 </div>
             </div>
