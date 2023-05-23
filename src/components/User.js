@@ -2,6 +2,7 @@ import React from 'react'
 import FirstName from './FirstName'
 import LastName from './LastName'
 import { useDispatch } from 'react-redux'
+import { setFirstName } from '../features/user/userSlice'
 
 const User = () => {
 
@@ -12,6 +13,7 @@ const User = () => {
                 type='text'
                 placeholder='First Name'
                 className='w-full p-1 mb-2 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
+               onChange={(e)=>dispatch(setFirstName(e.target.value))}
             />
             <input
                 type='text'
@@ -22,14 +24,14 @@ const User = () => {
                 <div className='flex flex-col'>
                     <div className='flex font-light'>First Name:</div>
                     <div className='flex'>
-                        {/* <FirstName /> */}
+                        <FirstName />
                     </div>
                 </div>
 
                 <div className='flex flex-col'>
                     <div className='flex font-light'>Last Name:</div>
                     <div className='flex'>
-                        {/* <LastName /> */}
+                        <LastName />
                     </div>
                 </div>
             </div>
