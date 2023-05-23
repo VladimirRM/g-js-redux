@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-// import firstName from "../features/user/userSlice"
+import {firstName }from "../features/user/userSlice"
 
 const FirstName = () => {
 
