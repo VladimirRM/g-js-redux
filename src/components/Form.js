@@ -8,7 +8,9 @@ const Form = () => {
 
     const addTodoHandler = ()=>{
         todo = {
-            id: v4()
+            id: v4(),
+            text:'',
+            completed: false,
         }
     }
     return (
