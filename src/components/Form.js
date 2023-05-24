@@ -1,5 +1,5 @@
 import React from 'react'
-import{ useDispatch} from "@reduxjs/toolkit"
+import{ useDispatch} from "react-redux"
 import { addTodo } from "../features/todo/todoSlice"
 import {v4} from 'uuid'
 
@@ -8,7 +8,7 @@ const Form = () => {
     const {todoValue,setTodoValue} = React.useState( '')
 
     const addTodoHandler = ()=>{
-        todo = {
+       const todo = {
             id: v4(),
             text:'',
             completed: false,
@@ -28,6 +28,7 @@ const Form = () => {
             <button
                 type='submit'
                 className='shrink-0 bg-lime-300  hover:bg-lime-400 transition-all px-3 text-sm'
+            onClick={()=>addTodoHandler()}
             >
                 Submit
             </button>

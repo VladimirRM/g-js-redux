@@ -1,6 +1,7 @@
 
 import './App.css';
 import User from './components/User';
+import Form from './components/Form';
 
 
 
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
 
    <User/>
+   <Form/>
   
 
     </div>
