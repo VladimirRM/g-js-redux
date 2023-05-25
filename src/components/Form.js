@@ -1,11 +1,14 @@
 import React from 'react'
 import {useDispatch}  from "react-redux"
+import  {v4} from uuid
 
 const Form = () => {
     const dispatch = useDispatch()
 
     const todo = { 
-        
+        id: v4(),
+        text:  todoValue,
+        completed: false
     }
     return (
         <form className='w-full flex' onSubmit={(e) => e.preventDefault()}>
