@@ -12,7 +12,7 @@ const initialState = {
 export const userSlice = createSlice({
     name: 'user',
     initialState,
-    reducer:{
+    reducers:{
            setFirstName: (state,action)=>{
             state.firstName = action.payload
            },
