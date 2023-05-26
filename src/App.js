@@ -20,7 +20,9 @@ function App() {
    <Form/>
 
       {todos?.map((todo)=>(
-   <TodoItem/>
+   <TodoItem key={todo.id}
+         todo={todo}
+   />
 
       ))}
     </div>
