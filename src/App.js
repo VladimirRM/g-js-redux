@@ -10,7 +10,7 @@ import TodoItem from "./components/TodoItem"
 
 function App() {
 
-  const todos = useSelector()
+  const todos = useSelector((state)=>state.todos.todo)
 
 
   return (

@@ -10,7 +10,7 @@ export const todoSLice = createSlice({
     initialState,
     reducers:{
         addTodo: (state,action)=>{
-            state.todos.push(state.action.payload) 
+            state.todos.push(action.payload) 
         }
     }
 })

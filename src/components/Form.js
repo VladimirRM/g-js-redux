@@ -4,7 +4,7 @@ import { addTodo } from "../features/todo/todoSlice"
 import  {v4} from "uuid"
 
 const Form = () => {
-    const dispatch = useDispatch((state)=>state.todos.todo)
+    const dispatch = useDispatch((state)=>state.todo.todos)
 
     const [todoValue,setTodoValue] = React.useState('')
 
@@ -15,6 +15,7 @@ const Form = () => {
             completed: false
         }
         dispatch(addTodo(todo))
+        setTodoValue('')
     }
     return (
         <form className='w-full flex' onSubmit={(e) => e.preventDefault()}>
