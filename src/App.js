@@ -10,11 +10,11 @@ import TodoItem from "./components/TodoItem"
 
 function App() {
 
-  const todos = useSelector((state)=>state.todos.todo)
+  const todos = useSelector((state)=>state.todo.todos)
 
 
   return (
-    <div className="App">
+    <div className="App"> 
 
    <User/>
    <Form/>
