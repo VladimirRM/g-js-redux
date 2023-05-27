@@ -13,10 +13,10 @@ export const todoSLice = createSlice({
             state.todos.push(action.payload) 
         },
         toggleCompletedTodo:(state,action)=>{
-            const toggleTodo = state.todos.find(todo=> todo.id ===action.payload)
+            const toggleTodo = state.todos.find(todo=> todo.id === action.payload)
         }
     }
 })
 
-export const { addTodo} = todoSLice.actions
+export const { addTodo,toggleCompletedTodo } = todoSLice.actions
 export default todoSLice.reducer
