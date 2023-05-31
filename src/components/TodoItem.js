@@ -1,4 +1,6 @@
 import React from 'react'
+import { toggleCompletedTodo } from '../features/todo/todoSlice'
+
 const TodoItem = ({todo}) => {
 
     return (
