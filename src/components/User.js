@@ -1,8 +1,12 @@
 import React from 'react'
 import FirstName from './FirstName'
 import LastName from './LastName'
+import { useDispatch } from 'react-redux'
+import {setFirstName,setLastName} from '../features/user/userSlice'
 
 const User = () => {
+
+    const dispatch = useDispatch()
     return (
         <div className='flex flex-col'>
             <input
