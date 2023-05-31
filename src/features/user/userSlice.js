@@ -15,10 +15,10 @@ export  const userSlice = createSlice({
         initialState,
         reducers: {
             setFirstName: (state,action)=>{
-                state.firstName = state.action.payload
+                state.firstName = action.payload
             },
             setLastName:(state,action)=>{
-                state.lastName = state.action.payload
+                state.lastName = action.payload
             }
         }
 
