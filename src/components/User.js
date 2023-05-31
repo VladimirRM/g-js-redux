@@ -13,6 +13,7 @@ const User = () => {
                 type='text'
                 placeholder='First Name'
                 className='w-full p-1 mb-2 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
+               onChange={(e)=>dispatch(setFirstName( e.target.value))}
             />
             <input
                 type='text'
