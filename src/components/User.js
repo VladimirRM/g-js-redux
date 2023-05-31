@@ -19,6 +19,7 @@ const User = () => {
                 type='text'
                 placeholder='Second Name'
                 className='w-full p-1 mb-2 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm'
+            onChange={(e)=>dispatch(setLastName(e.target.value))}
             />
             <div className='flex gap-20 py-5'>
                 <div className='flex flex-col'>
