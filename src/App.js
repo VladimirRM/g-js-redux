@@ -16,15 +16,7 @@ function App() {
   return (
     <div className="App"> 
 
-   <User/>
-   <Form/>
-
-      {todos.map((todo)=>(
-   <TodoItem key={todo.id}
-         todo={todo}
-   />
-
-      ))}
+ 
     </div>
   );
 }
