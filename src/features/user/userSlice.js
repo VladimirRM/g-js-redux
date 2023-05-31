@@ -17,8 +17,14 @@ export  const userSlice = createSlice({
             setFirstName: (state,action)=>{
                 state.firstName = state.action.payload
             },
-            setLastName:
+            setLastName:(state,action)=>{
+                state.lastName = state.action.payload
+            }
         }
 
-
-})
+        
+        
+        
+    })
+    export const { setFirstName, setLastName} = userSlice.actions
+    export default userSlice.reducer 
