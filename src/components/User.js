@@ -1,6 +1,7 @@
 import React from 'react'
 import FirstName from './FirstName'
 import LastName from './LastName'
+import {setFirstName,setLastName}  from "../features/user/userSlice"
 
 const User = () => {
     return (
