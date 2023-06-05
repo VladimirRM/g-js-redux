@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 
 const FirstName = () => {
 
-    const name 
+    const name = useSelector((state)=> state.user.firstName)
     return <div className='font-bold'>First Name</div>
 }
 
