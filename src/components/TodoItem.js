@@ -1,6 +1,7 @@
 import React from 'react'
 
-const TodoItem = () => {
+
+const TodoItem = ({todo}) => {
     const completed = false
     return (
         <div className='flex justify-between items-center my-2'>
@@ -8,7 +9,7 @@ const TodoItem = () => {
                 Complete
             </div>
             <div className={`text-sm ${completed ? 'line-through font-medium text-lime-400' : ''}`}>
-                {}
+                {todo.text}
             </div>
             <div className='text-sm px-4 py-2 flex bg-red-400 hover:bg-red-500 transition-all text-white cursor-pointer'>
                 Delete
