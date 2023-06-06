@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { addTodo } from '../features/todo/todoSlice'
 
 
 const Form = () => {
@@ -13,6 +14,7 @@ const Form = () => {
             text: todoValue,
             completed: false,
         }
+        dispatch(addTodo(todo))
     }
     return (
         <form className='w-full flex' onSubmit={(e) => e.preventDefault()}>
