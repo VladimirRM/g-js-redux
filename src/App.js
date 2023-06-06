@@ -25,12 +25,11 @@ function App() {
   return (
     <div className="App"> 
     <Form/>
-    { todos?.map((todo)=>(
+    {todos?.map((todo)=>(
     <TodoItem
     key={todo.id}
     todo={todo}/>
-
-    ))}
+     ))}
  
 <User/>
  
