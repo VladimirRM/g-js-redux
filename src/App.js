@@ -19,6 +19,7 @@ import { useSelector } from 'react-redux';
 
 
 
+
 function App() {
 
     const todos = useSelector((state)=>state.todo.todos)
@@ -31,6 +32,12 @@ function App() {
   return (
     <div className="App"> 
     <Form/>
+    {todos?.map((todo)=>(
+        <TodoItem key={todo.id}
+        todo={todo}
+        
+        />
+    ))}
  
  
 <User/>
