@@ -1,9 +1,12 @@
 
 import './App.css';
 import User from './components/User';
-import Form from './components/Form'
+import Form from './components/Form';
+import TodoItem from './components/TodoItem';
 import { useSelector } from 'react-redux';
-import TodoItem from './components/TodoItem'
+
+
+
 
 
 
@@ -12,7 +15,9 @@ import TodoItem from './components/TodoItem'
 
 function App() {
 
-  const todos = useSelector((state)=> state.todo.todos)
+    const todos = useSelector((state)=>state.todo.todos)
+
+
 
 
 
@@ -20,12 +25,13 @@ function App() {
   return (
     <div className="App"> 
     <Form/>
-       {todos?.map((todo)=>(
-        <TodoItem
-        key={todo.id}
-        todo={todo}
-        />
-       ))}
+    { todos?.map((todo)=>(
+    <TodoItem
+    key={todo.id}
+    todo={todo}/>
+
+    ))}
+ 
 <User/>
  
     </div>
