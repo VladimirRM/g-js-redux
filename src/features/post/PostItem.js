@@ -1,4 +1,6 @@
 import React from 'react'
+import { deletePostById } from './PostSlice'
+
 
 const PostItem = ({post}) => {
     return (
