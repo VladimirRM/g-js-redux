@@ -4,6 +4,7 @@ import User from './components/User';
 import Form from './components/Form';
 import TodoItem from './components/TodoItem';
 import { useSelector } from 'react-redux';
+import Posts from './features/post/Posts';
 
 
 
@@ -27,6 +28,7 @@ const todos  = useSelector((state)=> state.todo.todos)
     ))}
  
 <User/>
+<Posts/>
  
     </div>
   );
