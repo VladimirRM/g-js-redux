@@ -13,7 +13,11 @@ export const getPosts = createAsyncThunk(
         dispatch(setPosts(res.data))
     }
 )
-       
+
+
+export const removePostById =  createThunk({
+    
+}) 
 export const postSlice = createSlice({
        name: "posts",
        initialState,

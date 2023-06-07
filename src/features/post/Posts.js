@@ -21,6 +21,7 @@ const Posts = () => {
             
             <PostItem 
             key={post.title}
+            post={post}
             />
 
             ))}
