@@ -1,25 +1,26 @@
-import {createSlice,  createAsyncThunk}  from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk}  from '@reduxjs/toolkit'
 import axios from 'axios'
+// https://jsonplaceholder.typicode.com/posts
 
 
 const initialState = {
-    posts:[],
+    posts: [],
 }
 
-export const getPosts = createAsyncThunk(
-    'posts/getPosts', async (_,{rejectWithValue,dispatch})=>{
-      const res = await axios.get(' https://jsonplaceholder.typicode.com/posts')
-      dispatch(setPosts(res.data))
+export  const getPosts = createAsyncThunk(
+    'posts/getPosts',async (_, {rejectWithValue,dispatch})=>{
+       const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+       dispatch(setPosts(res.data))
     }
 )
 
-export const postSlice = createSlice({
-    name: "postSlice",
+export const postSlice  = createSlice({
+    name:'posts',
     initialState,
-    reducer:{
+    reducers:{
         setPosts:(state,action)=>{
-            state.posts = action.payload
-        }, 
+           state.posts = action.payload
+        },
     },
     extraReducers:{
         [getPosts.fulfilled]:()=>console.log('fulfilled'),
@@ -28,6 +29,7 @@ export const postSlice = createSlice({
     }
 })
 
-export const {setPosts} = postSlice.actions
-export default postSlice.reducer 
+export const {setPosts}  = postSlice.actions
+export default postSlice.reducer
+
 

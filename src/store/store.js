@@ -10,5 +10,5 @@ export const store = configureStore({
         user: userSlice,
         todo: todoSlice,
         post: postSlice,
-    }
+    } 
 })
