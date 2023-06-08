@@ -2,6 +2,7 @@
 
 
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 
 const initialState = {
@@ -22,7 +23,7 @@ export const postSlice = createSlice({
     name: 'posts',
     initialState,
     reducers:{
-        setPosts:()=>{
+        setPosts:(state,action)=>{
             state.posts = action.payload 
         },
     },
