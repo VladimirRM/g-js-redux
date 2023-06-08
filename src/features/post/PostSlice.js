@@ -1,12 +1,19 @@
 // https://jsonplaceholder.typicode.com/posts
 
-import { createSlice } from "@reduxjs/toolkit";
+
+import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 
 
-const initialState = createSlice{
+const initialState = {
     posts: [],
 
 }
+
+export const getPosts = createAsyncThunk(
+    "posts/getPosts",async(_,{rejectWithValue})=>{
+          const res = await axios.get('')
+    }
+)
 
 
 export const postSlice = createSlice({
@@ -19,7 +26,8 @@ export const postSlice = createSlice({
     }
 })
 
-export
+export const {setPosts}  = postSlice.actions
+export default postSlice.reducer
 
 
 
