@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux'
 const Posts = () => {
     const dispatch = useDispatch()
 
-    const posts = useSelector((state)=> state.posts.post)
+    const posts = useSelector((state)=> state.post.posts)
     return (
         <div>
             <button
@@ -16,6 +16,7 @@ const Posts = () => {
                 className='bg-lime-300  hover:bg-lime-400 transition-all p-2 text-sm'
               onClick={()=> dispatch(getPosts())}
            >
+            Get Post
                 {posts?.map((post)=>(
             <PostItem 
             key={post.title}
