@@ -17,7 +17,10 @@ const Posts = () => {
               onClick={()=> dispatch(getPosts())}
            >
                 {posts?.map((post)=>(
-            <PostItem />
+            <PostItem 
+            key={post.title}
+            post={post}
+            />
 
                 ))}
             </button>
