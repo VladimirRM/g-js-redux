@@ -13,13 +13,27 @@ export const getPosts = createAsyncThunk(
     }
 )
 
+export const deletePostById = (
+    "posts/deletePostById",async(id,{rejectWithValue})=>{
+        await axios.delete.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    }
+)
+
 export const postSlice = createSlice({
        name: 'posts',
        initialState,
        reducers:{
         setPosts:(state,action)=>{
             state.posts = action.payload
-        }
+        },
+       },
+       extraReducers:{
+          [getPosts.fulfilled]:()=> console.log("fulfilled"),
+          [getPosts.pending]:()=> console.log("pending"),
+          [getPosts.rejected]:()=> console.log("rejected"),
+          [getPosts.fulfilled]:()=> console.log("fulfilled"),
+          [getPosts.pending]:()=> console.log("pending"),
+          [getPosts.rejected]:()=> console.log("rejected"),
        }
 })
 
