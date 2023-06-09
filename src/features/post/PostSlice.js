@@ -21,6 +21,11 @@ export const postSlice =  createSlice({
             state.posts = action.payload
         },
     },
+    extraReducers:{
+        [getPosts.fulfilled]:()=>console.log('fulfilled'),
+        [getPosts.pending]:()=>console.log('pending'),
+        [getPosts.rejected]:()=>console.log('rejected'),
+    }
 
 }) 
 
