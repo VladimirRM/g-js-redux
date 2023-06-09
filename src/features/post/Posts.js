@@ -1,7 +1,11 @@
 import React from 'react'
 import PostItem from './PostItem'
+import { useSelector,useDispatch } from 'react-redux'
 
 const Posts = () => {
+    const dispatch = useDispatch()
+
+    const posts = useSelector((state)=> state.post.posts)
     return (
         <div>
             <button
