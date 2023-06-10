@@ -33,7 +33,15 @@ export const postSlice = createSlice({
             state.posts = state.posts.filter((post)=> post.id !==action.payload)
         }
       },
-      
+      extraReducers:{
+        [getPosts.fulfilled]:()=>console.log("fulfilled"),
+        [getPosts.pending]:()=>console.log("pending"),
+        [getPosts.rejected]:()=>console.log("rejected"),
+        [getPosts.fulfilled]:()=>console.log("fulfilled"),
+        [getPosts.pending]:()=>console.log("pending"),
+        [getPosts.rejected]:()=>console.log("rejected"),
+      }
+
 })
 
 export const {setPosts}  = postSlice.actions
