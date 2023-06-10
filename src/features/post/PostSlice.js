@@ -1,6 +1,7 @@
 // https://jsonplaceholder.typicode.com/posts
 
 import {createSlice,createAsyncThunk}  from  '@reduxjs/toolkit'
+import axios from 'axios'
 
 const initialState = {
     posts: [],
