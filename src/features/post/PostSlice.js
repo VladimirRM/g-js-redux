@@ -32,7 +32,8 @@ export const postSlice = createSlice({
         deletePost:(state,action)=>{
             state.posts = state.posts.filter((post)=> post.id !==action.payload)
         }
-      }
+      },
+      
 })
 
 export const {setPosts}  = postSlice.actions
