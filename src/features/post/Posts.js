@@ -6,7 +6,9 @@ const Posts = () => {
 
     const dispatch = useDispatch()
 
-    
+    const posts = useSelector((state)=> state.post.posts)
+
+
     return (
         <div>
             <button
