@@ -25,6 +25,9 @@ export const postSlice = createSlice({
     reducers:{
         setPosts:(state,action)=>{
             state.posts = action.payload
+        },
+        deletePost:(state,action)=>{
+            state.posts = state.posts.filter((post)=> post.id !==action.payload)
         }
     }
 })
