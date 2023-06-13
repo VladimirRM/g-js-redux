@@ -24,6 +24,6 @@ export const postSlice = createSlice({
     }
 })
 
-export const {setPost} = postSlice.actions
+export const {setPosts} = postSlice.actions
 export default postSlice.reducer
 
