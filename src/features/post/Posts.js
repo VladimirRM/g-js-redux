@@ -19,7 +19,12 @@ const Posts = () => {
             >
                 Get posts
             </button>
-            <PostItem />
+            {posts?.map((post)=>(
+            <PostItem 
+               
+            />
+
+            ))}
         </div>
     )
 }
