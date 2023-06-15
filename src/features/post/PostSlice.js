@@ -5,3 +5,8 @@ const initialState = {
     posts: [],
 }
 
+export const postSlice = createSlice({
+    name: 'posts',
+    
+})
+
