@@ -1,10 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
 
 const initialState = {
     posts:[],
 }
+
+export const getPosts = createAsyncThunk(
+    "posts/GetPosts",async (_,{rejectWithValue,dispatch})=>{
+       const res  = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    }
+)
 
 export const postSlice = createSlice({
     name:'posts',
