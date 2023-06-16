@@ -21,6 +21,7 @@ export const postSlice = createSlice({
         setPostsCreate:(state,action)=>{
             state.posts = action.payload
         }
+        
     }
 })
 
