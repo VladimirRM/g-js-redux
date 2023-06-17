@@ -6,12 +6,12 @@ import axios from 'axios'
     posts:[],
  }
 
- export const getPosts =  createAsyncThunk(
-    'posts/getPosts', async (_,{rejectedWithValue,dispatch})=>{
-        const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        dispatch(getPosts(res.data))
+export const getPosts = createAsyncThunk(
+    'post/getPosts',   async (_,{rejectedWithValue,dispatch})=>{
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+      dispatch(setPosts(res.data))
     }
- ) 
+)
 
 
  export const postSlice = createSlice({
@@ -25,7 +25,7 @@ import axios from 'axios'
  })
 
  export const {setPosts}  = postSlice.actions
- export default postSlice.reducer
+export default postSlice.reducer 
 
 
 
