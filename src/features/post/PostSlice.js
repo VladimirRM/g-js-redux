@@ -9,7 +9,9 @@ import {createSlice}  from '@reduxjs/toolkit'
     name:'post',
     initialState,
     reducers:{
-        setPosts:
+        setPosts:(state,action)=>{
+            state.posts = action.payload
+        }
     }
  })
 
