@@ -15,6 +15,9 @@ import {createSlice}  from '@reduxjs/toolkit'
     }
  })
 
+ export const {setPosts}  = postSlice.actions
+ export default postSlice.reducer
+
 
 
 
