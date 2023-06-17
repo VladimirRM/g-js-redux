@@ -1,4 +1,5 @@
 import {createSlice}  from '@reduxjs/toolkit'
+import axios from 'axios'
 
 
 const initialState = {
@@ -15,3 +16,6 @@ export  const postSlice = createSlice({
         }
     }
 })
+
+export const { getPosts}  = postSlice.actions
+export default postSlice.reducer 
