@@ -1,8 +1,13 @@
-import {createSlice}  from '@reduxjs/toolkit'
+import {createSlice, createAsyncThunk}  from '@reduxjs/toolkit'
+
 
  const initialState = {
     posts:[],
  }
+
+ export const getPosts =  createAsyncThunk(
+    'posts/getPosts'
+ ) 
 
 
  export const postSlice = createSlice({
