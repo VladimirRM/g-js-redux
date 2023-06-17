@@ -1,6 +1,7 @@
 import React from 'react'
 import PostItem from './PostItem'
 import {useSelector,useDispatch}  from ' react-redux'
+import {getPosts}  from './PostItem'
   
 const Posts = () => {
 
@@ -12,6 +13,8 @@ const Posts = () => {
             <button
                 type='submit'
                 className='bg-lime-300  hover:bg-lime-400 transition-all p-2 text-sm'
+               
+            
             >
                 Get posts
             </button>
