@@ -6,7 +6,9 @@ import {createSlice, createAsyncThunk}  from '@reduxjs/toolkit'
  }
 
  export const getPosts =  createAsyncThunk(
-    'posts/getPosts'
+    'posts/getPosts', async (_,{rejectedWithValue,dispatch})=>{
+        const res = await axios.get('')
+    }
  ) 
 
 
