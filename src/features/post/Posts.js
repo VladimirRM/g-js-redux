@@ -7,7 +7,7 @@ const Posts = () => {
     const dispatch = useDispatch()
 
     const posts = useSelector((state)=> state.post.posts)
-    
+
     return (
         <div>
             <button
@@ -16,7 +16,14 @@ const Posts = () => {
             >
                 Get posts
             </button>
-            <PostItem />
+            {posts?.map((post)=>(
+            <PostItem 
+            key={post.title}
+            post={post}
+            
+            />
+
+            ))}
         </div>
     )
 }
