@@ -2,11 +2,17 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 
-const initialstate = {
+const initialState = {
     posts: [],
 }
 
 export const postSlice = createSlice({
     name:'posts',
-    ini
+    initialState,
+    reducers:{
+        setPosts:(state,action)=>{
+            state.posts = action.payload
+        }
+    }
+
 })
