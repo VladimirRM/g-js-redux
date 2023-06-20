@@ -9,7 +9,8 @@ const initialState = {
 
 export const getPosts = createAsyncThunk(
     'post/getPosts',async(_,{rejectWithValue,dispatch})=>{
-     const res = await axiox.get('https://jsonplaceholder.typicode.com/posts')
+     const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
+     dispatch(setPosts(res.data))
     }
 )
 
