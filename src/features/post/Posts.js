@@ -22,7 +22,7 @@ const Posts = () => {
             {posts?.map((post)=>(
             <PostItem 
             
-            key={post.titlte}
+            key={post.title}
             post={post}
             />
 
