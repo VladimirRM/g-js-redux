@@ -14,11 +14,15 @@ const Posts = () => {
             <button
                 type='submit'
                 className='bg-lime-300  hover:bg-lime-400 transition-all p-2 text-sm'
-              onClick={()=>dispatch(getPost())}
+              onClick={()=>dispatch(getPosts())}
            >
                 Get posts
             </button>
-            <PostItem />
+            {posts?.map((post)=>(
+            <PostItem
+            key={post.title} />
+
+            ))}
         </div>
     )
 }
