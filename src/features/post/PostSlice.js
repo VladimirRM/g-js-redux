@@ -1,14 +1,21 @@
 // https://jsonplaceholder.typicode.com/postsimport React from 'react'
 
 
-import {createSlice}  from '@reduxjs/toolkit
-
-
-
+import {createSlice}  from '@reduxjs/toolkit'
 
 
 const initialState = {
   posts:[],
 }
+
+export const postSlice = createSlice({
+  name: 'posts',
+  initialState,
+  reducers:{
+    setPosts:(state.action)=>{
+      state.posts = action.payload
+    },
+  }
+})
 
 
