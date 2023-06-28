@@ -18,6 +18,7 @@ const Posts = () => {
             {posts?.map((post)=> (
             <PostItem 
             key={post.title}
+            post={post}
             />
      
             ))}
