@@ -19,7 +19,7 @@ const Posts = () => {
             </button>
             {posts?.map((post)=>(
             <PostItem
-            key={post>title}
+            key={post.title}
             post={post}
             />
 
