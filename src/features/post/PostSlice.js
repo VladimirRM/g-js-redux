@@ -1,9 +1,18 @@
-import {createSlice}  from '@reduxjs/toolkit'
+import {createSlice,createAsyncThunk}  from '@reduxjs/toolkit'
+import axios from 'axios'
 
 
 const initialState = {
   posts:[],
 }
+
+
+export const getPosts = createAsyncThunk(
+  'posts/getPosts', async (_,{rejectedWithValue,dispatch})=>{
+    const res = await axios.get('')
+    dispatch(setPosts(res.data))
+  }
+)
 
 export const postSlice  = createSlice({
   name: 'posts',
