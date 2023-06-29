@@ -6,6 +6,13 @@ const initialState = {
   posts:[],
 }
 
+export const deletePostById = createAsyncThunk(
+  'posts/deletePostById', async (id,{rejectWithValue,dispatch})=>{
+      await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      dispatch(deletePost(id))
+  }
+)
+
 
 export const getPosts = createAsyncThunk(
   'posts/getPosts', async (_,{rejectedWithValue,dispatch})=>{
