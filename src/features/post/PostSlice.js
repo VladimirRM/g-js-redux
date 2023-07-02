@@ -5,6 +5,10 @@ const initialState = {
   posts: [],
 }
 
+export const deletePostById = createAsyncThunk(
+      await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+)
+
 export const getPosts = createAsyncThunk(
   'posts/getPosts', async(_, {rejectWithValue,dispatch})=>{
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts')
