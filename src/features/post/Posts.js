@@ -1,6 +1,7 @@
 import React from 'react'
 import PostItem from './PostItem'
 import { useSelector,useDispatch } from 'react-redux'
+import { getPosts } from './PostSlice'
 
 const Posts = () => {
     const dispatch = useDispatch()
@@ -15,7 +16,10 @@ const Posts = () => {
                 Get posts
             </button>
             {posts?.map((post)=>(
-            <PostItem />
+            <PostItem 
+            key={post.title}
+            post={post}
+            />
 
             ))}
         </div>
