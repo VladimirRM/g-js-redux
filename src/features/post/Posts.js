@@ -14,7 +14,10 @@ const Posts = () => {
             >
                 Get posts
             </button>
+            {posts?.map((post)=>(
             <PostItem />
+
+            ))}
         </div>
     )
 }
