@@ -5,6 +5,11 @@ import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 const initialState = {
   posts:[],
 }
+export const getPosts = createAsyncThunk(
+  'posts/getPosts',async (_,{rejectWithValue,dispatch})=>{
+        const res
+  }
+)
 
 export const postSlice = createSlice({
   name:'posts',
