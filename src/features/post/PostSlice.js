@@ -13,5 +13,9 @@ export const postSlice = createSlice({
     setPosts:(state,action)=>{
       state.posts = action.payload
     }
+    
   }
 })
+
+export const {setPosts}= createSlice.actions
+export default postSlice.reducer
