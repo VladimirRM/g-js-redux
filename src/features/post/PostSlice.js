@@ -1,4 +1,5 @@
-import { createSlice,AsyncThunk, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 
 const initialState = {
@@ -6,8 +7,9 @@ const initialState = {
 }
 
 export const getPosts = createAsyncThunk(
-  'posts/getPosts', (_,{rejectWithValue,dispatch})=>{
-     
+  'posts/getPosts',async (_,{rejectWithValue,dispatch})=>{
+     const res  = await axios.get('https://jsonplaceholder.typicode.com/posts')
+     dispatch(setPosts(res.data))
   }
 )
 
