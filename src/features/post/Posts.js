@@ -16,7 +16,10 @@ const Posts = () => {
                 Get posts
             </button>
             {posts.map(post=>(
-            <PostItem />
+            <PostItem 
+            key={post.title}
+            post={post}
+            />
 
             ))}
         </div>
